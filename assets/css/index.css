@@ -7,15 +7,20 @@
    1. CSS Custom Properties
    -------------------------------------------------------------------------- */
 :root {
-  --bs-body-bg: #0f0f0f;
-  --bs-body-color: #f5f5f5;
-  --bs-primary: #6366f1;
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #000000;
+  --bs-primary: #0026ff;
   --bs-primary-rgb: 99, 102, 241;
 
   /* Custom tokens */
-  --color-bg-alt: #1a1a1a;
-  --color-muted: #6c757d;
+  --color-bg-alt: #cfcfcf;
+  --color-muted: #ffffff;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* Navbar text color - BLACK */
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+  color: #000000 !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -40,14 +45,14 @@ body {
    3. Navigation
    -------------------------------------------------------------------------- */
 .navbar {
-  background: rgba(15, 15, 15, 0.85);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: background 0.3s;
 }
 
 .navbar.scrolled {
-  background: rgba(15, 15, 15, 0.95);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .nav-link {
@@ -73,54 +78,22 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   4. Hero Section
+   4. Hero Section (HOME BACKGROUND IMAGE)
    -------------------------------------------------------------------------- */
 .hero {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  position: relative;
 }
 
+/* Fondo con imagen */
 .hero-bg {
-  background: inherit;
-  z-index: 0;
-}
-
-/* Floating shapes */
-.floating-shapes {
   position: absolute;
   inset: 0;
-  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),
+    url("../images/FOTO\ SOLO\ CUADROS\ FINAL.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: 0;
-}
-
-.shape {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.4;
-}
-
-.shape-1 {
-  width: 400px;
-  height: 400px;
-  background: var(--bs-primary);
-  top: 10%;
-  left: 10%;
-}
-
-.shape-2 {
-  width: 300px;
-  height: 300px;
-  background: #ec4899;
-  top: 60%;
-  right: 10%;
-}
-
-.shape-3 {
-  width: 250px;
-  height: 250px;
-  background: #14b8a6;
-  bottom: 10%;
-  left: 30%;
 }
 
 .hero-title {
@@ -128,7 +101,7 @@ body {
 }
 
 .hero-subtitle {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 /* Scroll indicator */
@@ -198,9 +171,9 @@ body {
 }
 
 .progress-bar {
-  background: linear-gradient(90deg, var(--bs-primary), #818cf8);
+  background: linear-gradient(90deg, var(--bs-primary), #519cff);
   border-radius: 4px;
-  width: 0; /* Animated by GSAP */
+  width: 0;
 }
 
 /* --------------------------------------------------------------------------
@@ -243,7 +216,7 @@ body {
 
 /* Badge styling */
 .bg-primary-subtle {
-  background-color: rgba(99, 102, 241, 0.15) !important;
+  background-color: rgba(48, 124, 255, 0.15) !important;
 }
 
 .text-primary {
