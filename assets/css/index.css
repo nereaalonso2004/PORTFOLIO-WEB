@@ -76,6 +76,28 @@ body {
   width: 100%;
   left: 0;
 }
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+}
+
+.navbar-brand,
+.nav-link {
+  color: #000 !important;
+}
+
+/* Icono hamburguesa negro */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
 
 /* --------------------------------------------------------------------------
    4. Hero Section (HOME BACKGROUND IMAGE)
